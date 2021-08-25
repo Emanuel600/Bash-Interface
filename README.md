@@ -4,4 +4,4 @@
   
   The main goal of this project in particular will be to receive data through one piece of code, process it through another and then finally produce a result on a final piece. This is to look into automation of processes via bash scripting.
   
-  The data will be randomly generated at first, but eventually I'll change it to download or log the data from a source and pre-process it with an algorithm and then pass the result through an executable tha may provide further insight(like a predictive model).
+  The data will be randomly generated at first, but eventually I'll change it to download or log the data from a source and pre-process it with an algorithm and then pass the result through an executable that may provide further insight(like a predictive model).
