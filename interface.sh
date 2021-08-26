@@ -18,3 +18,7 @@ echo # For a little separation between input and output
 
 # Show result of analysis
 cat analysed_file
+
+# The only reason for there being multiple files is that it makes it easier
+#to view all outputs and see if something went wrong along the way. They can
+#all be changed to "file" without compromising the code.
