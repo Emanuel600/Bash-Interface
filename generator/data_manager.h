@@ -2,7 +2,7 @@
 #define DATA_MANAGER_H_
 
 // Create space for array
-int* crate(int size);
+int* create(int size);
 // Fill array with data
 int* fill(int* data, int size);
 // Print to standard output
