@@ -15,7 +15,7 @@ int* create(int size){
 		perror("Error when creating vector");
 		exit(-1);
 	}
-	// Set random seed an return allocated space
+	// Set random seed and return allocated space
 	srand((unsigned) time(NULL));
 	return data;
 }
