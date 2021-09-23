@@ -10,6 +10,8 @@ echo $amount | ./generator.exe > file
 content=$(cat file)
 echo $amount $content | ./quicksort.exe > sorted_file
 
+# WIP? => I remember testing it and it working, but had some issues recently
+
 # Finally, a program will separate the sorted data into quartiles for analysis
 content=$(cat sorted_file)
 echo $amount $content | ./analyser.exe > analysed_file
