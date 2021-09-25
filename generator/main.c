@@ -2,6 +2,8 @@
  * Manage subcode accordingly
  */
 
+#include <stdio.h>
+
 #include "data_manager.h"
 
 int main(){

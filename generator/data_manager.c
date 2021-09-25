@@ -5,6 +5,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #include "data_manager.h"
 
@@ -15,8 +16,9 @@ int* create(int size){
 		perror("Error when creating vector");
 		exit(-1);
 	}
+	time_t ass;
 	// Set random seed and return allocated space
-	srand((unsigned) time(NULL));
+	srand((unsigned) time(&ass));
 	return data;
 }
 // Fill array with random data
@@ -30,10 +32,8 @@ int* fill(int* data, int size){
 }
 // Print data to standard output
 void print_data(int* data, int size){
-	int i;
-
-	for (i=0; i<size; i++)
-		printf("%d ", data[i]);
+	// Output binary to stdout
+	fwrite(data, sizeof(int), size, stdout);
 }
 
 

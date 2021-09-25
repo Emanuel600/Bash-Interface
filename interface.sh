@@ -4,23 +4,26 @@
 # First we'll need a generator
 echo Enter amount of numbers to create
 read amount
-echo $amount | ./generator.exe > file
+echo $amount | ./generator.exe > file.dat
 
 # Next, we'll send all data in the file to be sorted
-content=$(cat file)
-echo $amount $content | ./quicksort.exe > sorted_file
 
-# WIP? => I remember testing it and it working, but had some issues recently
+echo $amount file.dat | ./quicksort.exe > sorted_file
 
 # Finally, a program will separate the sorted data into quartiles for analysis
-content=$(cat sorted_file)
-echo $amount $content | ./analyser.exe > analysed_file
+
+# WIP
+
+#content=$(cat sorted_file)
+#echo $amount $content | ./analyser.exe > analysed_file
 
 echo # For a little separation between input and output
 
 # Show result of analysis
-cat analysed_file
+cat sorted_file #analysed_file
 
 # The only reason for there being multiple files is that it makes it easier
 #to view all outputs and see if something went wrong along the way. They can
 #all be changed to "file" without compromising the code.
+
+echo # Since the file doesn't end with a new line

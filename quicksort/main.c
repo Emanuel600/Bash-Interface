@@ -5,17 +5,24 @@
 #include "quicksort.h"
 
 int main(){
-	int size, i;
+	int size;
+	char name[12];
 
-	scanf("%d", &size);
+	scanf("%d %s", &size, name);
 	// Allocate space for array
 	int* data = malloc(size* sizeof(int));
+	// Open file
+	FILE* fp = fopen(name, "rb");
+	if (fp == NULL){
+		perror("Error when opening file");
+		exit(-1);
+	}
 	// Fill array
-	for (i=0; i<size; i++)
-		scanf("%d ", &data[i]);
+	fread(data, sizeof(int), size, fp);
 	// Sort array
 	call_quick(data, size);
-	// Print results in stdout
+	// Print numbers
+	int i;
 	for (i=0; i<size; i++)
 		printf("%d ", data[i]);
 }
