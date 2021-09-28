@@ -19,6 +19,8 @@ int main(){
 	}
 	// Fill array
 	fread(data, sizeof(int), size, fp);
+	// Close file
+	fclose(fp);
 	// Sort array
 	call_quick(data, size);
 	// Print numbers
