@@ -1,14 +1,12 @@
 # This code is a proof of concept for a way to tie various executables and
 #their outputs together with a command script (whith this one in bash)
 #!/bin/bash
-# First we'll need a generator
-echo Enter amount of numbers to create
-read amount
-echo $amount | ./generator.exe > file.dat
+# Call: ./interface.sh $amount
+echo "$1" | ./generator.exe > file.dat
 
 # Next, we'll send all data in the file to be sorted
 
-echo $amount file.dat | ./quicksort.exe > sorted_file
+echo "$1" file.dat | ./quicksort.exe > sorted_file
 
 # Finally, a program will separate the sorted data into quartiles for analysis
 
